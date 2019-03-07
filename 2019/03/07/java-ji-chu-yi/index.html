@@ -639,6 +639,8 @@ double d=b;
 <ul>
 <li>如果字符串不会更改，请使用String类，因为String对象是不可变的。</li>
 <li>如果字符串可以更改（例如：字符串构造中的大量逻辑和操作）并且只能从单个线程访问，则使用 StringBuilder 就足够了。</li>
+</ul>
+<ul>
 <li>如果字符串可以更改，并且将从多个线程访问，使用 StringBuffer 因为 StringBuffer 是同步的，因此具有线程安全性。</li>
 </ul>
 <p>在大部分情况下 StringBuffer &gt; String，StringBuilder &gt; StringBuffer。</p>
@@ -695,6 +697,8 @@ System.out.println(a == b );  //true
 </li>
 </ul>
 </li>
+</ul>
+<ul>
 <li><p>方法区</p>
 <ul>
 <li><p>静态区，跟堆一样，被所有的线程共享</p>
@@ -708,8 +712,12 @@ System.out.println(a == b );  //true
 <p>问题：String str = new String(“abc”) 创建多少个对象？</p>
 <ul>
 <li><p>1.在常量池中查找是否有”abc”对象</p>
-<p> -有则返回对应的引用实例</p>
-<p> -没有则创建对应的实例对象</p>
+<ul>
+<li><p>有则返回对应的引用实例</p>
+</li>
+<li><p>没有则创建对应的实例对象</p>
+</li>
+</ul>
 </li>
 <li><p>2.在堆中 new 一个 String(“abc”) 对象</p>
 </li>
