@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://longj.xyz/2019/03/07/java-ji-chu-yi/</loc>
-    <lastmod>2019-03-13</lastmod>
+    <loc>https://longj.xyz/2019/01/31/spring-kuang-jia-ji-chu-zhi-shi/</loc>
+    <lastmod>2019-03-25</lastmod>
   </url>  <url>
     <loc>https://longj.xyz/2019/02/15/springmvc-kuang-jia-xue-xi-zong-jie/</loc>
-    <lastmod>2019-02-20</lastmod>
-  </url>  <url>
-    <loc>https://longj.xyz/2019/01/31/spring-kuang-jia-ji-chu-zhi-shi/</loc>
-    <lastmod>2019-01-31</lastmod>
+    <lastmod>2019-03-25</lastmod>
   </url>  <url>
     <loc>https://longj.xyz/2019/01/28/github-hexo-da-jian-shu-yu-zi-ji-de-yi-ge-bo-ke/</loc>
-    <lastmod>2019-01-30</lastmod>
+    <lastmod>2019-03-25</lastmod>
+  </url>  <url>
+    <loc>https://longj.xyz/2019/03/22/java-ji-chu-er/</loc>
+    <lastmod>2019-03-25</lastmod>
+  </url>  <url>
+    <loc>https://longj.xyz/2019/03/07/java-ji-chu-yi/</loc>
+    <lastmod>2019-03-22</lastmod>
   </url>
 </urlset>

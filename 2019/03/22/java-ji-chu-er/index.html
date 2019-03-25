@@ -5,10 +5,9 @@
 
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Spring框架基础知识, 朝花夕拾丶">
-    <meta name="description" content="Spring框架基础知识
-
-前言首先有一个问题，什么是 Spring 呢？Spring 啊，它是一个开源框架，是为了解决企业应用程序开发复杂性而创建的。企业级开发 JavaEE 框架有很多，经过一系列的技术变迁，现在应该绝大部分企业开发都是">
+    <meta name="keywords" content="Java基础（二）, 朝花夕拾丶">
+    <meta name="description" content="前言这段时间把基础这部分又过了一遍，归纳整理了有关继承、Object通用方法、关键字的相关知识。
+继承访问权限Java中有四种访问权限， 其中三种有访问权限修饰符，分别为private、public、protected，还有一种不带任何修饰">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +15,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Spring框架基础知识 | 朝花夕拾丶</title>
+    <title>Java基础（二） | 朝花夕拾丶</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -280,13 +279,13 @@
 
 
 
-<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Spring框架基础知识
+                        Java基础（二）
                     </div>
                 </div>
             </div>
@@ -399,12 +398,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Spring/" target="_blank">
-                                <span class="chip bg-color">Spring</span>
-                            </a>
-                        
-                            <a href="/tags/JAVA后端/" target="_blank">
-                                <span class="chip bg-color">JAVA后端</span>
+                            <a href="/tags/Java/" target="_blank">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
                     </div>
@@ -415,8 +410,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Spring/" class="post-category" target="_blank">
-                                Spring
+                            <a href="/categories/Java/" class="post-category" target="_blank">
+                                Java
                             </a>
                         
                     </div>
@@ -427,21 +422,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2019-01-31
+                    2019-03-22
                 </div>
 
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        2.7k
+                        3.6k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        9 分
+                        13 分
                     </div>
                     
                 
@@ -457,65 +452,307 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><strong>Spring框架基础知识</strong></p>
-<a id="more"></a>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>首先有一个问题，什么是 Spring 呢？Spring 啊，它是一个开源框架，是为了解决企业应用程序开发复杂性而创建的。企业级开发 JavaEE 框架有很多，经过一系列的技术变迁，现在应该绝大部分企业开发都是用的 Spring 框架了吧，之所以要用 Spring 进行开发，肯定是因为优点多啊。因为优点多，所以我们需要去了解它，熟悉它，精通它。</p>
-<h1 id="Spring框架概述"><a href="#Spring框架概述" class="headerlink" title="Spring框架概述"></a>Spring框架概述</h1><h2 id="什么是Spring"><a href="#什么是Spring" class="headerlink" title="什么是Spring"></a>什么是Spring</h2><p>Spring 是一个开源框架，是为了解决企业应用程序开发复杂性而创建的。框架的主要优势之一就是其分层架构，分层架构允许您选择使用哪一个组件，同时为 J2EE 应用程序开发提供集成的框架。Spring使用基本的JavaBean来完成以前只可能由EJB完成的事情。任何 Java 应用都可以从 Spring 中受益。Spring 的核心是控制反转（IoC）和面向切面（AOP）。简单来说，Spring 是一个分层的 JavaSE/EE full-stack(一站式) <strong>轻量级开源框架</strong>。</p>
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这段时间把基础这部分又过了一遍，归纳整理了有关继承、Object通用方法、关键字的相关知识。</p>
+<h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><h2 id="访问权限"><a href="#访问权限" class="headerlink" title="访问权限"></a>访问权限</h2><p><strong>Java中有四种访问权限， 其中三种有访问权限修饰符，分别为private、public、protected，还有一种不带任何修饰符（default）。如果不加访问修饰符，表示包级可见。</strong></p>
+<p>protected 用于修饰成员，表示在继承体系中成员对于子类可见，但是这个访问修饰符对于类没有意义。</p>
+<p>设计良好的模块会隐藏所有的实现细节，把它的 API 与它的实现清晰地隔离开来。模块之间只通过它们的 API 进行通信，一个模块不需要知道其他模块的内部工作情况，这个概念被称为信息隐藏或封装。因此访问权限应当尽可能地使每个类或者成员不被外界访问。</p>
+<p>如果子类的方法重写了父类的方法，那么子类中该方法的访问级别<strong>不允许低于父类的访问级别</strong>。这是为了确保可以使用父类实例的地方都可以使用子类实例，也就是确保满足<strong>里氏替换原则</strong>。</p>
+<p>也就是说只要我是你的子类，继承了你的方法，那就只能比你的访问级别更高。长江后浪推前浪，只有比父亲级别高，才能保证别人只要跟你的父亲合作时就能使用你的资源。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>同一个类</th>
+<th>同一个包</th>
+<th>不同包的子类</th>
+<th>不同包的非子类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>public</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>默认(default)</td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>private</td>
+<td>√</td>
+</tr>
+</tbody>
+</table>
+<p>字段决不能是公有的，因为这么做的话就失去了对这个字段修改行为的控制，客户端可以对其随意修改。例如下面的例子中，AccessExample 拥有 id 公有字段，如果在某个时刻，我们想要使用 int 存储 id 字段，那么就需要修改所有的客户端代码。</p>
+<pre><code>public class AccessExample {
+    public String id;
+}
+</code></pre><p>可以使用公有的 getter 和 setter 方法来替换公有字段，这样的话就可以控制对字段的修改行为。</p>
+<pre><code>public class AccessExample {
+
+    private int id;
+
+    public String getId() {
+        return id + &quot;&quot;;
+    }
+
+    public void setId(String id) {
+        this.id = Integer.valueOf(id);
+    }
+}
+</code></pre><p>但是也有例外，如果是包级私有的类或者私有的嵌套类，那么直接暴露成员不会有特别大的影响。</p>
+<pre><code>public class AccessWithInnerClassExample {
+
+    private class InnerClass {
+        int x;
+    }
+
+    private InnerClass innerClass;
+
+    public AccessWithInnerClassExample() {
+        innerClass = new InnerClass();
+    }
+
+    public int getValue() {
+        return innerClass.x;  // 直接访问
+    }
+}
+</code></pre><p>所以总结如下：</p>
+<blockquote>
+<ol>
+<li><p>private: Java语言中对访问权限限制的最窄的修饰符，一般称之为“私有的”。被其修饰的属性以及方法只能被该类的对象 访问，其子类不能访问，更不能允许跨包访问。</p>
+</li>
+<li><p>default：即不加任何访问修饰符，通常称为“默认访问权限“或者“包访问权限”。该模式下，只允许在同一个包中进行访问。</p>
+</li>
+<li><p>protected: 介于public 和 private 之间的一种访问修饰符，一般称之为“保护访问权限”。被其修饰的属性以及方法只能被类本<br>身的方法及子类访问，即使子类在不同的包中也可以访问。</p>
+</li>
+<li><p>public： Java语言中访问限制最宽的修饰符，一般称之为“公共的”。被其修饰的类、属性以及方法不仅可以跨类访问，而且     允许跨包访问。</p>
+</li>
+</ol>
+</blockquote>
+<h2 id="抽象类与接口"><a href="#抽象类与接口" class="headerlink" title="抽象类与接口"></a>抽象类与接口</h2><p>抽象类与接口是java语言中对抽象概念进行定义的两种机制，两者有一定的区别也有很多的相似性。很多常见的面试题都会出诸如抽象类和接口有什么区别，什么情况下会使用抽象类和什么情况你会使用接口</p>
+<p>抽象类和抽象方法都使用 abstract 关键字进行声明。<strong>抽象类一般会包含抽象方法，抽象方法一定位于抽象类中。</strong></p>
+<p>抽象类和普通类最大的区别是，抽象类不能被实例化，需要继承抽象类才能实例化其子类。</p>
+<pre><code>public abstract class GenericServlet implements Servlet, ServletConfig, Serializable {
+    // abstract method
+    abstract void service(ServletRequest req, ServletResponse res);
+
+    void init() {
+        // Its implementation
+    }
+    // other method related to Servlet
+}
+</code></pre><pre><code>public class HttpServlet extends GenericServlet {
+    void service(ServletRequest req, ServletResponse res) {
+        // implementation
+    }
+
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
+        // Implementation
+    }
+
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
+        // Implementation
+    }
+
+    // some other methods related to HttpServlet
+}
+</code></pre><p>接口是抽象方法的集合。如果一个类实现了某个接口，那么它就继承了这个接口的抽象方法。这就像契约模式，如果实现了这个接口，那么就必须确保使用这些方法。接口只是一种形式，接口自身不能做任何事情。</p>
+<p>接口是抽象类的延伸，在 Java 8 之前，它可以看成是一个完全抽象的类，也就是说它不能有任何的方法实现。</p>
+<p>从 Java 8 开始，接口也可以拥有默认的方法实现，这是因为不支持默认方法的接口的维护成本太高了。在 Java 8 之前，如果一个接口想要添加新的方法，那么要修改所有实现了该接口的类。</p>
+<p>接口的成员（字段 + 方法）默认都是 public 的，并且不允许定义为 private 或者 protected。</p>
+<p>接口的字段默认都是 static 和 final 的。</p>
+<p>当你实现这个接口时，你就需要实现接口的方法。</p>
+<p><strong>比较：</strong></p>
 <ul>
-<li>1、轻量级：与EJB对比，依赖资源少，销毁的资源少。</li>
-<li>2、一站式，每一个层都提供的解决方案</li>
-</ul>
-<h2 id="Spring核心"><a href="#Spring核心" class="headerlink" title="Spring核心"></a>Spring核心</h2><p>Spring <strong>面向方面编程（AOP）</strong>和<strong>控制反转 （IOC） 容器</strong></p>
-<h2 id="Spring优点"><a href="#Spring优点" class="headerlink" title="Spring优点"></a>Spring优点</h2><ul>
-<li>1、方便解耦，简化开发 （高内聚低耦合），使用Spring的IOC容器，将对象之间的依赖关系交给Spring，让我们更专注于应用逻辑</li>
-<li>2、Spring就是一个大工厂（容器），可以将所有对象创建和依赖关系维护，交给Spring管理</li>
-<li>3、对主流的框架提供了很好的集成支持，如Hibernate,Struts2,JPA等</li>
-<li>4、Spring提供面向切面编程，可以方便的实现对程序进行权限拦截、运行监控等功能</li>
-<li>5、Spring的高度可开放性，并不强制依赖于Spring，开发者可以自由选择Spring部分或全部</li>
-</ul>
-<h2 id="Spring体系结构"><a href="#Spring体系结构" class="headerlink" title="Spring体系结构"></a>Spring体系结构</h2><p>Spring 框架是一个分层架构，由 7 个定义良好的模块组成。Spring 模块构建在核心容器之上，核心容器定义了创建、配置和管理 bean 的方式，如图所示。</p>
-<p><img src="http://plvjsuzx8.bkt.clouddn.com/Spring7%E5%A4%A7%E6%A8%A1%E5%9D%97.jpg" alt="7大模式"></p>
-<p>组成 Spring 框架的每个模块（或组件）都可以单独存在，或者与其他一个或多个模块联合实现。每个模块的功能如下：</p>
+<li>从使用上来看，一个类可以实现多个接口，但是不能继承多个抽象类。</li>
+<li>接口的字段只能是 static 和 final 类型的，而抽象类的字段没有这种限制。</li>
+<li>接口的成员只能是 public 的，而抽象类的成员可以有多种访问权限。</li>
+<li>抽象类可以有构造器，接口不能有构造器。</li>
+<li>抽象类的实现：子类使用<strong>extends</strong>关键字来继承抽象类。如果子类不是抽象类的话，它需要提供抽象类中所有声明的方法的实现。</li>
+<li><p>接口的实现：子类使用关键字implements来实现接口。它需要提供接口中所有声明的方法的实现</p>
+<p><strong>使用选择：</strong><br>接口：</p>
 <ul>
-<li><strong>核心容器</strong>：核心容器提供 Spring 框架的基本功能。核心容器的主要组件是 BeanFactory，它是工厂模式的实现。BeanFactory 使用控制反转 （IOC） 模式将应用程序的配置和依赖性规范与实际的应用程序代码分开。</li>
-<li><strong>Spring</strong> 上下文：Spring 上下文是一个配置文件，向 Spring 框架提供上下文信息。Spring 上下文包括企业服务，例如 JNDI、EJB、电子邮件、国际化、校验和调度功能。</li>
-<li><strong>Spring AOP</strong>：通过配置管理特性，Spring AOP 模块直接将面向方面的编程功能集成到了 Spring 框架中。所以，可以很容易地使 Spring 框架管理的任何对象支持 AOP。Spring AOP 模块为基于 Spring 的应用程序中的对象提供了事务管理服务。通过使用 Spring AOP，不用依赖 EJB 组件，就可以将声明性事务管理集成到应用程序中。</li>
-<li><strong>Spring DAO</strong>：JDBC DAO 抽象层提供了有意义的异常层次结构，可用该结构来管理异常处理和不同数据库供应商抛出的错误消息。异常层次结构简化了错误处理，并且极大地降低了需要编写的异常代码数量（例如打开和关闭连接）。Spring DAO 的面向 JDBC 的异常遵从通用的 DAO 异常层次结构。</li>
-<li><strong>Spring ORM</strong>：Spring 框架插入了若干个 ORM 框架，从而提供了 ORM 的对象关系工具，其中包括 JDO、Hibernate 和 iBatis SQL Map。所有这些都遵从 Spring 的通用事务和 DAO 异常层次结构。</li>
-<li><strong>Spring Web</strong> 模块：Web 上下文模块建立在应用程序上下文模块之上，为基于 Web 的应用程序提供了上下文。所以，Spring 框架支持与 Jakarta Struts 的集成。Web 模块还简化了处理多部分请求以及将请求参数绑定到域对象的工作。</li>
-<li><strong>Spring MVC</strong> 框架：MVC 框架是一个全功能的构建 Web 应用程序的 MVC 实现。通过策略接口，MVC 框架变成为高度可配置的，MVC 容纳了大量视图技术，其中包括 JSP、Velocity、Tiles、iText 和 POI。</li>
+<li>需要让不相关的类都实现一个方法，例如不相关的类都可以实现 Compareable 接口中的 compareTo() 方法；</li>
+<li>需要使用多重继承。</li>
 </ul>
-<p>看了 Spring 是什么，我们再来看看 Spring 的两大核心。</p>
-<h1 id="Spring-两大核心-IOC-跟-AOP"><a href="#Spring-两大核心-IOC-跟-AOP" class="headerlink" title="Spring 两大核心 IOC 跟 AOP"></a>Spring 两大核心 IOC 跟 AOP</h1><h2 id="Spring依赖注入和控制反转的理解"><a href="#Spring依赖注入和控制反转的理解" class="headerlink" title="Spring依赖注入和控制反转的理解"></a>Spring依赖注入和控制反转的理解</h2><h3 id="Ioc—Inversion-of-Control，即“控制反转”，不是什么技术，而是一种设计思想。"><a href="#Ioc—Inversion-of-Control，即“控制反转”，不是什么技术，而是一种设计思想。" class="headerlink" title="Ioc—Inversion of Control，即“控制反转”，不是什么技术，而是一种设计思想。"></a>Ioc—Inversion of Control，即“控制反转”，不是什么技术，而是一种设计思想。</h3><p>理解好Ioc的关键是要明确“谁控制谁，控制什么，为何是反转（有反转就应该有正转了），哪些方面反转了”</p>
-<p>谁控制谁，控制什么：传统Java SE程序设计，我们直接在对象内部通过new进行创建对象，是程序主动去创建依赖对象；而IoC是有专门一个容器来创建这些对象，即<strong>由Ioc容器来控制对象的创建；谁控制谁？当然是IoC 容器控制了对象；控制什么？那就是主要控制了外部资源获取</strong>（不只是对象包括比如文件等）。</p>
-<p>为何是反转，哪些方面反转了：有反转就有正转，传统应用程序是由我们自己在对象中主动控制去直接获取依赖对象，也就是正转；而<strong>反转则是由容器来帮忙创建及注入依赖对象；为何是反转？因为由容器帮我们查找及注入依赖对象，对象只是被动的接受依赖对象，所以是反转；哪些方面反转了？依赖对象的获取被反转了。</strong></p>
-<p>IoC 不是一种技术，只是一种思想，一个重要的面向对象编程的法则，它能指导我们如何设计出松耦合、更优良的程序。</p>
-<h3 id="DI—Dependency-Injection，即“依赖注入”：由容器动态的将某个依赖关系注入到组件之中。"><a href="#DI—Dependency-Injection，即“依赖注入”：由容器动态的将某个依赖关系注入到组件之中。" class="headerlink" title="DI—Dependency Injection，即“依赖注入”：由容器动态的将某个依赖关系注入到组件之中。"></a>DI—Dependency Injection，即“依赖注入”：由容器动态的将某个依赖关系注入到组件之中。</h3><p>理解DI的关键是：“谁依赖谁，为什么需要依赖，谁注入谁，注入了什么”</p>
-<p>谁依赖于谁：当然是应用程序依赖于IoC容器；</p>
-<p>　　&emsp;为什么需要依赖：应用程序需要IoC容器来提供对象需要的外部资源；</p>
-<p>　　&emsp;谁注入谁：很明显是IoC容器注入应用程序某个对象，应用程序依赖的对象；</p>
-<p>　　&emsp;注入了什么：就是注入某个对象所需要的外部资源（包括对象、资源、常量数据）。</p>
-<p>&emsp;&emsp;2004年，大师级人物 Martin Fowler 给出了一个新的名字：“依赖注入”，相对IoC 而言，“依赖注入”明确描述了“被注入对象依赖IoC容器配置依赖对象”。</p>
-<p>&emsp;&emsp;当初学习 Spring 的时候看过很多对 Spring 的 IOC 的理解的文章，官方文档也看过。实际上开发过程中自己是实操过，但是对这个控制反转还是一头雾水，在慕课上看了一篇学习笔记，对作者的这种解释比较满意，清楚的解释了什么是控制，什么是反转，谁依赖谁，谁注入谁。</p>
-<h2 id="面向切面编程AOP"><a href="#面向切面编程AOP" class="headerlink" title="面向切面编程AOP"></a>面向切面编程AOP</h2><h3 id="什么是AOP呢？"><a href="#什么是AOP呢？" class="headerlink" title="什么是AOP呢？"></a>什么是AOP呢？</h3><p>我们常说：“这件事情要从几个方面来看待”，往往意思是：需要从不同的角度来看待同一个事物。这里的“方面”，指的是事物的外在特性在不同观察角度下的体现。而在AOP中，Aspect的含义，可能更多的理解为“切面”比较合适。<strong>这在程序开发上就是：通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。</strong></p>
-<p><strong>主要功能：</strong><br>&emsp;&emsp;日志记录，性能统计，安全控制，事务处理，异常处理等等。</p>
-<h3 id="什么时候用到AOP呢？"><a href="#什么时候用到AOP呢？" class="headerlink" title="什么时候用到AOP呢？"></a>什么时候用到AOP呢？</h3><p>拿我前面做过的一个项目举个例子吧，做的是一个公司的订餐系统，这个系统需要用到Shiro鉴权。<br>项目里面很多的接口，但是有的接口不需要鉴权就可以访问了，是开放的。<br>但是还有一些接口，需要特定权限的用户才能访问，比如说公司的领导的权限跟员工的权限不一样，还有系统管理员。</p>
-<p>如果要用 OOP 处理的话，必须在对应的接口代码里面，一个一个写上鉴权的代码。</p>
-<p>但是如果使用了AOP之后，写一个接口，在需要鉴权的接口上面添加一个注解即可解决了。这样的做法，对原有代码毫无入侵性，这就是AOP的好处了，把和主业务无关的事情，放到代码外面去做。</p>
-<p><img src="http://plvjsuzx8.bkt.clouddn.com/%E9%89%B4%E6%9D%83.jpg" alt="鉴权"></p>
-<p>上面的例子。给 listCanteenOrders() 方法加入鉴权采用了代理模式。代理模式就是：写了新的接口，去代理一个一个鉴权的代码鉴权。</p>
-<p>代理分为静态代理和动态代理，静态代理，顾名思义，就是你自己写代理对象，动态代理，则是在运行期，生成一个代理对象。</p>
-<p>Spring AOP就是基于动态代理的，如果要代理的对象，实现了某个接口，那么Spring AOP会使用JDK Proxy，去创建代理对象。</p>
-<p>AOP常用的还有在日志打印跟事务处理方面应用的比较多。</p>
-<h3 id="AOP的优点"><a href="#AOP的优点" class="headerlink" title="AOP的优点"></a>AOP的优点</h3><ul>
-<li><p>AOP 是一个概念，一个规范，本身并没有设定具体语言的实现，这实际上提供了非常广阔的发展的空间。</p>
-</li>
-<li><p>AOP 同时还可以让我们层次化功能性而不是嵌入功能性，从而使得代码有更好的可读性和易于维护。</p>
-</li>
-<li><p>AOP 让我们在进行系统架构和模块设计的时候多了新的选择和新的思路。</p>
 </li>
 </ul>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>面向过程编程已经成为了过去式，面向对象编程正在一统软件开发世界。而 Spring 是独特的、优秀的。今天有时间梳理一遍关于 Spring 的有关知识还是收获颇多，许多知识也是以往的自己所不知道的。关于 Spring 的学习还远远没有结束。学习的最好的方法就是尝试，积累足够的项目经验，才能在需要用到时候信手拈来，继续努力吧！</p>
+<p>抽象类：</p>
+<ul>
+<li>需要在几个相关的类中共享代码。</li>
+<li>需要能控制继承来的成员的访问权限，而不是都为 public。</li>
+<li>需要继承非静态和非常量字段。</li>
+</ul>
+<p>在很多情况下，接口优先于抽象类。因为接口没有抽象类严格的类层次结构要求，可以灵活地为一个类添加行为。并且从 Java 8 开始，接口也可以有默认的方法实现，使得修改接口的成本也变的很低。</p>
+<h2 id="重写与重载"><a href="#重写与重载" class="headerlink" title="重写与重载"></a>重写与重载</h2><ol>
+<li>重写（Override）</li>
+</ol>
+<p>存在于继承体系中，指子类实现了一个与父类在方法声明上完全相同的一个方法。</p>
+<p>为了满足里式替换原则，重写有有以下两个限制：</p>
+<ul>
+<li>子类方法的访问权限必须大于等于父类方法；</li>
+<li>子类方法的返回类型必须是父类方法返回类型或为其子类型。<br>使用 <strong>@Override</strong>注解，可以让编译器帮忙检查是否满足上面的两个限制条件。</li>
+</ul>
+<ol start="2">
+<li>重载（Overload）</li>
+</ol>
+<p>存在于同一个类中，指一个方法与已经存在的方法名称上相同，但是参数类型、个数、顺序至少有一个不同。</p>
+<p>应该注意的是，返回值不同，其它都相同不算是重载。</p>
+<h1 id="Object-通用方法"><a href="#Object-通用方法" class="headerlink" title="Object 通用方法"></a>Object 通用方法</h1><blockquote>
+<p>Java类层次结构的顶层是Object类，所有的其他类都隐式的继承于它。</p>
+</blockquote>
+<pre><code>public native int hashCode()
+
+public boolean equals(Object obj)
+
+protected native Object clone() throws CloneNotSupportedException
+
+public String toString()
+
+public final native Class&lt;?&gt; getClass()
+
+protected void finalize() throws Throwable {}
+
+public final native void notify()
+
+public final native void notifyAll()
+
+public final native void wait(long timeout) throws InterruptedException
+
+public final void wait(long timeout, int nanos) throws InterruptedException
+
+public final void wait() throws InterruptedException
+</code></pre><p>重点方法：<strong>equals、hashCode、toString和clone</strong></p>
+<h2 id="equals"><a href="#equals" class="headerlink" title="equals()"></a>equals()</h2><p>equals()方法实现需要满足以下几个规则限制：</p>
+<ul>
+<li><strong>自反性</strong>：对象x必须与其自身相等，equals(x)返回true</li>
+<li><strong>对称性</strong>：如果equals(y)为true，则y.equals(x)也要返回true</li>
+<li><strong>传递性</strong>：如果equals(y)为true，并且y.equals(z)也为true，则x.equals(z)也要为true</li>
+<li><strong>一致性</strong>：多次调用equals()方法应该返回相同值，除非对用于判等的任何一个属性进行了修改</li>
+<li><strong>与null判等</strong>：equals(null)总是要返回false</li>
+</ul>
+<pre><code>x.equals(x); // true     -------自反性
+
+x.equals(y) == y.equals(x); // true      -------对称性
+
+if (x.equals(y) &amp;&amp; y.equals(z))            -------传递性
+    x.equals(z); // true;
+
+x.equals(y) == x.equals(y); // true            -------一致性
+
+x.equals(null); // false;            -------与null判等
+</code></pre><p><strong>等价与相等</strong></p>
+<ul>
+<li>对于基本类型，== 判断两个值是否相等，基本类型没有 equals() 方法。</li>
+<li>对于引用类型，== 判断两个变量是否引用同一个对象，而 equals() 判断引用的对象是否等价。</li>
+</ul>
+<pre><code>Integer x = new Integer(1);
+Integer y = new Integer(1);
+System.out.println(x.equals(y)); // true
+System.out.println(x == y);      // false
+</code></pre><h2 id="hashCode"><a href="#hashCode" class="headerlink" title="hashCode()"></a>hashCode()</h2><p>hashCode() 返回散列值，而 equals() 是用来判断两个对象是否等价。等价的两个对象散列值一定相同，但是散列值相同的两个对象不一定等价。</p>
+<p>在覆盖 equals() 方法时应当总是覆盖 hashCode() 方法，保证等价的两个对象散列值也相等。</p>
+<p>为了避免得到不可预期的结果，尽可能在实现equals()和hashCode()方法时使用final字段，从而保证方法的结果不会受到字段变化的影响(尽管真实场景中未必发生)。</p>
+<p>最后，要确保在实现equals()和hashCode()方法是使用相同的字段，以确保在不可预期的字段调整时保证这两个方法行为的一致性。</p>
+<h2 id="toString-NaN"><a href="#toString-NaN" class="headerlink" title="toString()"></a>toString()</h2><p>默认情况下，toString()的结果仅仅返回以@符分隔的全类名与对象哈希值串。（ToStringExample@4554617c）<br>其中 @ 后面的数值为散列码的无符号十六进制表示。</p>
+<h2 id="clone"><a href="#clone" class="headerlink" title="clone()"></a>clone()</h2><p>clone() 是 Object 的 protected 方法，它不是 public，一个类不显式去重写 clone()，其它类就不能直接去调用该类实例的 clone() 方法。</p>
+<p>clone()方法的目的很简单——返回对象实例的拷贝</p>
+<p>注意：clone() 方法并不是 Cloneable 接口的方法，而是 Object 的一个 protected 方法。Cloneable 接口只是规定，如果一个类没有实现 Cloneable 接口又调用了 clone() 方法，就会抛 CloneNotSupportedException。</p>
+<p>在重载时需要声明为public并把返回值类型调整为重载类自身类型。再次，重载类需要实现Cloneable接口(尽管该接口作为一种声明，并未提供任何方法定义)，否则将会抛出CloneNotSupportedException异常。最后，在实现clone()方法时要先调用super.clone()然后再执行其他需要的动作。</p>
+<h1 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h1><h2 id="final"><a href="#final" class="headerlink" title="final"></a>final</h2><p>1.<strong>声明数据为常量</strong>，可以是编译时常量，也可以是在运行时被初始化后不能被改变的常量。</p>
+<ul>
+<li>对于基本类型，final 使数值不变；</li>
+<li>对于引用类型，final 使引用不变，也就不能引用其它对象，但是被引用的对象本身是可以修改的。</li>
+</ul>
+<pre><code>final int x = 1;
+// x = 2;  // cannot assign value to final variable &#39;x&#39;
+final A y = new A();
+y.a = 1;
+</code></pre><p>2.<strong>声明方法不能被子类重写。</strong></p>
+<p>private 方法隐式地被指定为 final，如果在子类中定义的方法和基类中的一个 private 方法签名相同，此时子类的方法不是重写基类方法，而是在子类中定义了一个新的方法。</p>
+<p>3.<strong>声明类不允许被继承。</strong></p>
+<h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2><p>static表示“全局”或者“静态”的意思，用来修饰成员变量和成员方法,<strong>被static修饰的成员变量和成员方法独立于该类的任何对象。</strong></p>
+<ol>
+<li>静态变量</li>
+</ol>
+<ul>
+<li>静态变量：又称为类变量，也就是说这个变量属于类的，类所有的实例都共享静态变量，可以直接通过类名来访问它。静态变量在内存中只存在一份。</li>
+<li>实例变量：每创建一个实例就会产生一个实例变量，它与该实例同生共死。</li>
+</ul>
+<pre><code>public class A {
+
+    private int x;         // 实例变量
+    private static int y;  // 静态变量
+
+    public static void main(String[] args) {
+        // int x = A.x;  // Non-static field &#39;x&#39; cannot be referenced from a static context
+        A a = new A();
+        int x = a.x;
+        int y = A.y;
+    }
+}
+</code></pre><ol start="2">
+<li>静态方法<br>静态方法在类加载的时候就存在了，它不依赖于任何实例。所以静态方法必须有实现，也就是说它不能是抽象方法</li>
+</ol>
+<pre><code>public class A {
+
+    private static int x;
+    private int y;
+
+    public static void func1(){
+        int a = x;
+        // int b = y;  // Non-static field &#39;y&#39; cannot be referenced from a static context
+        // int b = this.y;     // &#39;A.this&#39; cannot be referenced from a static context
+    }
+}
+</code></pre><p><strong>只能访问所属类的静态字段和静态方法，方法中不能有 this 和 super 关键字。</strong></p>
+<ol start="3">
+<li>静态语句块</li>
+</ol>
+<p><strong>静态语句块在类初始化时运行一次。</strong></p>
+<pre><code>public class A {
+    static {
+        System.out.println(&quot;123&quot;);       //123
+    }
+
+    public static void main(String[] args) {
+        A a1 = new A();
+        A a2 = new A();
+    }
+}
+</code></pre><ol start="4">
+<li>static和final一块用表示什么</li>
+</ol>
+<ul>
+<li>static final用来修饰成员变量和成员方法，可简单理解为“全局常量”！</li>
+<li>对于变量，表示一旦给值就不可修改，并且通过类名可以访问。</li>
+<li>对于方法，表示不可覆盖，并且可以通过类名直接访问</li>
+</ul>
+<ol start="5">
+<li>初始化顺序<br>静态变量和静态语句块优先于实例变量和普通语句块，静态变量和静态语句块的初始化顺序取决于它们在代码中的顺序。</li>
+</ol>
+<p>存在继承的情况下，初始化顺序为：</p>
+<ul>
+<li>父类（静态变量、静态语句块）</li>
+<li>子类（静态变量、静态语句块）</li>
+<li>父类（实例变量、普通语句块）</li>
+<li>父类（构造函数）</li>
+<li>子类（实例变量、普通语句块）</li>
+<li>子类（构造函数）</li>
+</ul>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>写了这么多，收获也很多。全当一个归纳总结了。看了这么多例子，最重要的是要举一反三，先问是不是，再问为什么。多用，多学。</p>
+<p>文中若有不正之处，欢迎批评指正！</p>
 
             </div>
             <hr>
@@ -539,7 +776,7 @@
                     </span>
                     <a href="https://longj.xyz" class="b-link-green">朝花夕拾丶</a>
                     <i class="fa fa-angle-right fa-lg fa-fw text-color"></i>
-                    <a href="/2019/01/31/spring-kuang-jia-ji-chu-zhi-shi/" class="b-link-green">Spring框架基础知识</a>
+                    <a href="/2019/03/22/java-ji-chu-er/" class="b-link-green">Java基础（二）</a>
                 </p>
             </div>
         </div>
@@ -562,47 +799,43 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/02/15/springmvc-kuang-jia-xue-xi-zong-jie/">
+                <a href="/2019/03/22/java-ji-chu-er/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="SpringMVC框架学习总结">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Java基础（二）">
                         
-                        <span class="card-title">SpringMVC框架学习总结</span>
+                        <span class="card-title">Java基础（二）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">SpringMVC框架学习总结
-
-前言在学校就开始学习 Spring MVC，出来工作之后也用了 Spring MVC 开发了几个项目。但是，还没有好好的系统的梳理一下所学的知识，今天有时间就好好的来做个总结吧。
-Spring MVC学习笔</div>
+                    <div class="summary">前言这段时间把基础这部分又过了一遍，归纳整理了有关继承、Object通用方法、关键字的相关知识。
+继承访问权限Java中有四种访问权限， 其中三种有访问权限修饰符，分别为private、public、protected，还有一种不带任何修饰</div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-02-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Spring/" class="post-category" target="_blank">
-                                    Spring
+                            <a href="/categories/Java/" class="post-category" target="_blank">
+                                    Java
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Spring/" target="_blank">
-                        <span class="chip bg-color">Spring</span>
-                    </a>
-                    
-                    <a href="/tags/JAVA后端/" target="_blank">
-                        <span class="chip bg-color">JAVA后端</span>
+                    <a href="/tags/Java/" target="_blank">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>
@@ -616,29 +849,29 @@ Spring MVC学习笔</div>
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/01/28/github-hexo-da-jian-shu-yu-zi-ji-de-yi-ge-bo-ke/">
+                <a href="/2019/03/07/java-ji-chu-yi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Github+hexo 搭建属于自己的一个博客">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Java基础（一）">
                         
-                        <span class="card-title">Github+hexo 搭建属于自己的一个博客</span>
+                        <span class="card-title">Java基础（一）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
-                    <div class="summary">技术小白搭建个人博客&emsp;—— hexo+github
+                    <div class="summary">Java基础知识点归纳
 
-前言为什么要搭建一个自己的博客呢？   因为是个技术小白，然后经常在网上浏览各种技术博客，总面临一个问题。那就是每次看过之后就忘了，回过头来感觉还是没学到什么，就像做无用功一样</div>
+前言有空就想借着写博客的同时把 Java 相关的个人所学的基础知识做一个梳理整合。内容尽量做到全面，浅显易懂吧，这样既方便自己以后查阅复习，也分享出来给刚刚入门的程序员们，希望可以给大家一些参考，让大家对Java有</div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-01-28
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-03-07
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/hexo/" class="post-category" target="_blank">
-                                    hexo
+                            <a href="/categories/Java/" class="post-category" target="_blank">
+                                    Java
                                 </a>
                             
                             
@@ -648,8 +881,8 @@ Spring MVC学习笔</div>
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/" target="_blank">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/Java/" target="_blank">
+                        <span class="chip bg-color">Java</span>
                     </a>
                     
                 </div>
